@@ -31,3 +31,5 @@ const Work = [
     description: "A website that offers fitness training services..",
   },
 ];
+
+export default Work;
