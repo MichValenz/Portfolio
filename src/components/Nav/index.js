@@ -1,25 +1,16 @@
 import React from "react";
 
 
-const navOptions = [
-    {
-        name: "Portfolio",
-        description: "Applications completed by Michelle Valenzuela"
-    },
-    {
-        name: "Resume",
-        description: "Michelle's work and education history."
-    }
-];
 
-function optionSelected(name) {
+
+function sampleSelected(name) {
   console.log(`${name} clicked`);
 }
 
 
 
 //I need to add a link to the homepage (/) and images to header/nav bar
-function Nav() {
+function Nav(props) {
   return (
     <header>
       <h2>
@@ -33,9 +24,9 @@ function Nav() {
           <li>
             <span>Contact</span>
           </li>
-          {navOptions.map((navOption) => (
-            <li className="mx-1" key={navOption.name}>
-              <span onClick={optionSelected}>{navOption.name}</span>
+          {workSamples.map((sample) => (
+            <li className="mx-1" key={sample.name}>
+              <span onClick={sampleSelected}>{sample.name}</span>
             </li>
           ))}
         </ul>
