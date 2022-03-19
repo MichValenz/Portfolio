@@ -36,13 +36,25 @@ function Nav({currentOption, changeOption}) {
           <li className="mx-2">
             <a
               data-testid="link"
-              href="#about"
-              onClick={() => changeOption("About Me")}
+              href="#resume"
+              onClick={() => changeOption("Resume")}
               className={
-                currentOption === "About Me" ? "main-nav-active" : "navActive"
+                currentOption === "Resume" ? "main-nav-active" : "navActive"
               }
             >
-              About Me
+              Resume
+            </a>
+          </li>
+          <li className="mx-2">
+            <a
+              data-testid="link"
+              href="#Portfolio"
+              onClick={() => changeOption("Portfolio")}
+              className={
+                currentOption === "Portfolio" ? "main-nav-active" : "navActive"
+              }
+            >
+              Portfolio
             </a>
           </li>
           <li className="mx-2">
