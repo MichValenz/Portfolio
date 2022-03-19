@@ -7,16 +7,16 @@ import React from "react";
 //I need to add a link to the homepage (/) and images to header/nav bar
 function Nav() {
   return (
-    <header>
+    <header className="flex-row px-1">
       <h2>
-        <a home="link" href="/">
+        <a data-testid="link" href="/">
           Michelle Valenzuela
         </a>
       </h2>
       <nav>
-        <ul className="aboutme">
-          <li className="aboutmeList">
-            <a href="#about">About me</a>
+        <ul className="flex-row">
+          <li className="mx-2">
+            <a href="#about">About Me</a>
           </li>
           <li>
             <span>Contact</span>
