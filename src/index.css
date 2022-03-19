@@ -81,6 +81,10 @@ p {
   margin-top: 0;
 }
 
+main-nav-active {
+  color: tomato;
+}
+
 a {
   color: var(--tertiary);
   text-decoration: none;

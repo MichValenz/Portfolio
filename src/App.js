@@ -1,11 +1,12 @@
 import React from "react";
 import Nav from "./components/Nav";
-import Work from "./components/Work"
+import Project from "./components/Project"
 import About from "./components/About";
 
 
 
 function App() {
+
   return (
     
     <div>

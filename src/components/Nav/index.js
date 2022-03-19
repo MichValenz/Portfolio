@@ -1,31 +1,62 @@
 import React from "react";
 
 
-
-
-
-//I need to add a link to the homepage (/) and images to header/nav bar
-function Nav() {
+function Nav({currentOption, changeOption}) {
+  
   return (
     <header className="flex-row px-1">
       <h2>
-        <a data-testid="link" href="/">
+        <a
+          data-testid="link"
+          href="/"
+          onClick={() => changeOption("Michelle Valenzuela")}
+          className={
+            currentOption === "Michelle Valenzuela"
+              ? "main-nav-active"
+              : "navActive"
+          }
+        >
           Michelle Valenzuela
         </a>
       </h2>
       <nav>
         <ul className="flex-row">
           <li className="mx-2">
-            <a href="#about">About Me</a>
+            <a
+              data-testid="link"
+              href="/"
+              onClick={() => changeOption("Home")}
+              className={
+                currentOption === "Home" ? "main-nav-active" : "navActive"
+              }
+            >
+              Home
+            </a>
           </li>
-          <li>
-            <span>Contact</span>
+          <li className="mx-2">
+            <a
+              data-testid="link"
+              href="#about"
+              onClick={() => changeOption("About Me")}
+              className={
+                currentOption === "About Me" ? "main-nav-active" : "navActive"
+              }
+            >
+              About Me
+            </a>
           </li>
-          {/* {props.map((sample) => (
-            <li className="mx-1" key={sample.name}>
-              <span onClick={sampleSelected}>{sample.name}</span>
-            </li>
-          ))} */}
+          <li className="mx-2">
+            <a
+              data-testid="link"
+              href="#contact"
+              onClick={() => changeOption("Contact")}
+              className={
+                currentOption === "Contact" ? "main-nav-active" : "navActive"
+              }
+            >
+              Contact
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
