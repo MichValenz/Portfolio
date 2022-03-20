@@ -6,6 +6,7 @@ function Nav({currentOption, navOptionChange}) {
 
 
   return (
+    <>
     <header className="flex-row px-1">
       <h2>
         <a
@@ -69,7 +70,12 @@ function Nav({currentOption, navOptionChange}) {
         </ul>
       </nav>
     </header>
+       <div class="hero">
+      <div class="hero-section"></div>
+    </div>
+    </>
   );
+  
 }
 
 export default Nav;
