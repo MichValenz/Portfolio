@@ -297,3 +297,9 @@ a {
 .navActive {
   color: var(--secondary);
 }
+
+footer {
+  height: 5px;
+  padding: 0px;
+  margin: 100px;
+}
