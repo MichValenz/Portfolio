@@ -1,9 +1,13 @@
 import React from "react";
 import { Container, Col, Row } from 'react-bootstrap';
+import Figure from "react-bootstrap/Figure";
+import FigureImage from "react-bootstrap/FigureImage";
+import headshot from "../../images/headshot.png"
+
 
 function About() {
   return (
-    <Container >
+    <Container fluid bg-light>
       <Row id="aboutMe">
         <Col>
           <h1 id="about">About Me</h1>
@@ -18,6 +22,15 @@ function About() {
             know the importance of an efficient and engaging website.
           </p>
         </Col>
+        <Figure>
+          <Figure.Image
+            width={171}
+            height={180}
+            src={headshot}
+            className="img-fluid rounded-circle"
+            alt="headshot of Michelle Valenzuela"
+          />
+        </Figure>
       </Row>
     </Container>
   );

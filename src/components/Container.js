@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import Nav from "./Nav";
+import Navigation from "./Nav";
 // import Projects from "./components/Projects";
 import About from "./About";
 // import Resume from "./components/Resume";
 import Contact from "./Contact";
+import NavOptions from "./Nav";
 
 function Container() {
   const [currentOption, setOption] = useState("Home");
@@ -18,17 +19,23 @@ function Container() {
     // if (currentOption === "Projects") {
     //   return <Projects />;
     // }
-    return <Contact />;
+    if (currentOption === "Contact") {return <Contact />;}
   };
 
   const navOptionChange = (option) => setOption(option);
 
   return (
+    <>
     <div>
-      <Nav currentOption={currentOption} navOptionChange={navOptionChange} />
+      <Navigation currentOption={currentOption} navOptionChange={navOptionChange} />
       {render()}
     </div>
+
+    <footer>Website created by: Michelle Valenzuela</footer>
+    </>
   );
+
+
 }
 
 export default Container;

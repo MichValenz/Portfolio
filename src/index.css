@@ -1,49 +1,15 @@
 
-main {
-	margin: 0 auto;
-	max-width: 90%;
-  padding: 50px 30px;
-}
-:root {
-  --primary: #8c54ff;
-  --secondary: #F3A847;
-  --tertiary: #B12704;
-  --light: #fafafa;
-  --dark: #000000;
-  --darker: #111111;
-  --error: rgb(228, 46, 1);
-  --spacing-one: calc(1rem * 0.5);
-  --spacing-two: calc(1rem);
-  --spacing-five: calc(2.5rem);
-
-}
-
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
-
-html,
-body {
-  min-height: 100%;
-  background-color: darkgrey;
-}
-
-
 
 
 main-nav-active {
   color: tomato;
 }
 
-a {
-  color: var(--tertiary);
-  text-decoration: none;
-  font-weight: bold;
-}
-
-a:hover {
-  text-decoration: underline;
-}
 
 header {
   padding: 20px 35px;
@@ -61,6 +27,8 @@ header {
   z-index: 9999;
 
 }
+
+
 
 header h1 {
   font-weight: bold;
@@ -90,12 +58,13 @@ header nav ul li a {
   padding: 10px 15px;
   font-weight: lighter;
   font-size: 1.75vw;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  color: #000000;
+  
 }
 
 header nav ul li a:hover {
   background: #e4e9fb;
-  color: #2e374d;
+  color: #0b0f1a;
   border-radius: 15px;
   text-shadow: none;
 }
@@ -113,62 +82,11 @@ header nav ul li a:hover {
 }
 
 #aboutMe {
-  padding: 50px;
-  margin: 50px;
+  padding: 20px;
+ 
 
 }
 
-
-button {
-  font-size: 1rem;
-  text-decoration: none;
-  padding: 0.25rem 1rem;
-  border-radius: .5rem;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  margin: 0 1px;
-  background-color: var(--secondary);
-}
-
-button:hover {
-  opacity: .8;
-}
-
-button[disabled] {
-  cursor: default;
-  opacity: .8;
-}
-
-img {
-  max-width: 100%;
-}
-
-span[role="img"] {
-  cursor: default;
-}
-
-form {
-  width: 40%;
-}
-
-input {
-  font-size: 1rem;
-  padding: 0.25rem;
-  border: 1px solid var(--dark);
-  outline: none;
-  border-radius: 3px;
-  transition: box-shadow 0.2s;
-}
-
-input:focus {
-  border: 1px solid var(--secondary);
-  box-shadow: 0 0 .25rem rgba(0, 0, 0, .5);
-}
-
-li {
-  list-style: none;
-}
 
 nav a:hover {
   text-decoration: none;
@@ -178,18 +96,12 @@ nav  li {
   cursor: pointer;
 }
 
-textarea {
-	width: 600px;
-	height: 120px;
-	border: 3px solid #cccccc;
-	padding: 5px;
-}
 
 .container {
-  width: 85%;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+
+  width: 100%;
+  
+  margin:0;
 }
 
 .flex-row {
@@ -250,72 +162,14 @@ textarea {
   padding-bottom: var(--spacing-two);
 }
 
-.card {
-  width: 25%;
-  text-align: center;
-}
 
-.img-thumbnail {
-  width: auto;
-  height: 300px;
-  margin-bottom: 50px;
-  cursor: pointer;
-}
-
-.modalBackdrop {
-	background: rgba(0, 0, 0, .65);
-	bottom: 0;
-	left: 0;
-	overflow: auto;
-	position: fixed;
-	right: 0;
-	top: 0;
-	z-index: 1;
-}
-
-.modalContainer {
-	background: var(--darker);
-	border-radius: 5px;
-	max-width: 100%;
-	margin: 50px auto;
-	padding: 15px;
-	width: 960px;
-}
-
-.modalTitle {
-	font-size: 18px;
-	font-weight: 600;
-	margin-bottom: 25px;
-}
-
-button {
-	background: var(--primary);
-	border: 0;
-	border-radius: 5px;
-	color: #fff;
-	cursor: pointer;
-	font-size: 16px;
-	font-weight: 600;
-	margin-bottom: 30px;
-	padding: 10px 15px;	
-}
-
-a {
-	border-radius: 5px;
-	color: var(--primary);
-	font-weight: 600;
-	padding: 2px 4px;
-	margin-left: -2px;
-	margin-right: -2px;
-	
-}
-
-.navActive {
-  color: var(--secondary);
-}
 
 footer {
-  height: 5px;
-  padding: 0px;
-  margin: 100px;
+  background-image: url("./images/taiki-ishikawa-y0jKNcwsDcM-unsplash.jpg");
+  
+  background-size: cover;
+  background-position: fixed;
+  background-attachment: fixed;
+  padding: 10%;
+  
 }
