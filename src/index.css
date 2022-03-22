@@ -104,6 +104,28 @@ nav  li {
   margin:0;
 }
 
+.contactForm {
+ padding: 20px;
+}
+
+.contact {
+  background-image: url("./images/taiki-ishikawa-y0jKNcwsDcM-unsplash.jpg");
+  height: 300px;
+  background-size: cover;
+  background-position: 80%;
+  background-attachment: fixed;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+.contact-info h3 {
+  color: #2e374d;
+  font-size: 25px;
+}
+
 .flex-row {
   display: flex;
   flex-wrap: wrap;

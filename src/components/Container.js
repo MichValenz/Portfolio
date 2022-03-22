@@ -26,12 +26,15 @@ function Container() {
 
   return (
     <>
-    <div>
-      <Navigation currentOption={currentOption} navOptionChange={navOptionChange} />
-      {render()}
-    </div>
+      <div>
+        <Navigation
+          currentOption={currentOption}
+          navOptionChange={navOptionChange}
+        />
+        {render()}
+      </div>
 
-    <footer>Website created by: Michelle Valenzuela</footer>
+      <footer>Website created by: Michelle Valenzuela</footer>
     </>
   );
 
