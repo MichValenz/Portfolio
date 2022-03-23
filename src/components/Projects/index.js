@@ -4,7 +4,7 @@ import { Col, Row } from "react-bootstrap";
 
 
 function Projects() {
-const Projects = [
+const projectList = [
   {
     name: "FiMi QA",
     description:
