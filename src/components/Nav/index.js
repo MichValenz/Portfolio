@@ -23,15 +23,18 @@ function Navigation({currentOption, navOptionChange}) {
             <Nav.Link
               href="/"
               onClick={() => navOptionChange("/")}
-              className={
-                currentOption === "Home" ? "currentOption" : ""
-              }
+              className={currentOption === "Home" ? "currentOption" : ""}
             >
               Home
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link eventKey="link-1" href="/#Resume">
+            <Nav.Link
+              eventKey="link-1"
+              href="/#Resume"
+              onClick={() => navOptionChange("Resume")}
+              className={currentOption === "Resume" ? "currentOption" : ""}
+            >
               Resume
             </Nav.Link>
           </Nav.Item>
@@ -44,7 +47,6 @@ function Navigation({currentOption, navOptionChange}) {
             <Nav.Link
               eventKey="link-3"
               href="/#Contact"
-      
               onClick={() => navOptionChange("Contact")}
               className={currentOption === "Contact" ? "currentOption" : ""}
             >
