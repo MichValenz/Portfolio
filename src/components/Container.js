@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import Navigation from "./Nav";
-// import Projects from "./components/Projects";
+import Projects from "./Projects";
 import About from "./About";
 import Resume from "./Resume/";
 import Contact from "./Contact";
-import NavOptions from "./Nav";
+
 
 function Container() {
   const [currentOption, setOption] = useState("Home");
@@ -16,9 +16,9 @@ function Container() {
     if (currentOption === "Resume") {
       return <Resume />;
     }
-    // if (currentOption === "Projects") {
-    //   return <Projects />;
-    // }
+    if (currentOption === "Projects") {
+      return <Projects />;
+    }
     if (currentOption === "Contact") {return <Contact />;}
   };
 

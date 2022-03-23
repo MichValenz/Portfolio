@@ -21,6 +21,7 @@ function Navigation({currentOption, navOptionChange}) {
         <Nav variant="pills" defaultActiveKey="/home">
           <Nav.Item>
             <Nav.Link
+              eventKey="link-1"
               href="/"
               onClick={() => navOptionChange("/")}
               className={currentOption === "Home" ? "currentOption" : ""}
@@ -39,8 +40,12 @@ function Navigation({currentOption, navOptionChange}) {
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link eventKey="link-2" href="Projects">
-              Projects
+            <Nav.Link 
+            eventKey="link-2" 
+            href="/#Projects"
+            onClick={() => navOptionChange("Projects")}
+            className={currentOption === "Projects" ? "currentOption" : ""}
+              >Projects
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
