@@ -84,11 +84,7 @@ header nav ul li a:hover {
 
 
 nav a:hover {
-  text-decoration: none;
-}
-
-nav  li {
-  cursor: pointer;
+  text-decoration:rgb(9, 68, 9)
 }
 
 

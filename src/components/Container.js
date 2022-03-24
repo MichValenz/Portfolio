@@ -7,7 +7,7 @@ import Contact from "./Contact";
 
 
 function Container() {
-  const [currentOption, setOption] = useState("Home");
+  const [currentOption, setOption] = useState("About Me");
 
   const render = () => {
     if (currentOption === "About Me") {
