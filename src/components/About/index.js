@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Col, Row } from 'react-bootstrap';
 import Figure from "react-bootstrap/Figure";
-import FigureImage from "react-bootstrap/FigureImage";
 import headshot from "../../images/headshot.png"
 
 

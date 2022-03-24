@@ -22,11 +22,11 @@ function Navigation({currentOption, navOptionChange}) {
           <Nav.Item>
             <Nav.Link
               eventKey="link-1"
-              href="/#Home"
-              onClick={() => navOptionChange("Home")}
-              className={currentOption === "Home" ? "currentOption" : ""}
+              href="/#About Me"
+              onClick={() => navOptionChange("About Me")}
+              className={currentOption === "About Me" ? "currentOption" : ""}
             >
-              Home
+              About Me
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>

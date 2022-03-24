@@ -1,7 +1,8 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import { Col, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
+import CardGroup from "react-bootstrap/CardGroup";
 
 
 
@@ -52,21 +53,28 @@ const projectList = [
 
  const render = (proj) => { 
   return (
-    <Row className="project d-flex justify-content-around">
-      <Col>
-        <Card style={{ width: "18rem" }}>
-          <Card.Img  variant="top" src={proj.image} />
+   
+    <Row className="row">
+      <Col >
+        <Card className="project" style={{ width: "20rem", height: "28rem" }}>
+          <Card.Img className="work-1" variant="top" src={proj.image} />
           <Card.Body>
             <Card.Title>{proj.name}</Card.Title>
             <Card.Text>{proj.description}</Card.Text>
-            <Button variant="primary" href={proj.link}>Go to Website</Button>
+            <Button variant="primary" href={proj.link}>
+              Go to Website
+            </Button>
           </Card.Body>
         </Card>
       </Col>
-    </Row>
+   </Row>
   );}
 
-  return <div className="grid">{projectList.map(render)}</div>
+  return (
+    <CardGroup className="justify-content-center projContainer">
+      {projectList.map(render)}
+    </CardGroup>
+  );
 }
 
 export default Projects;

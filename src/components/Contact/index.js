@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import { validateEmail } from "../../utils/helpers"
 
 
 function Contact() {
@@ -11,11 +12,31 @@ function Contact() {
   });
 
   const { name, email, message } = formState;
+  const [errorMessage, setErrorMessage] = useState("");
+
+  function handleChange(e) {
+    if (e.target.name === "email") {
+      const isValid = validateEmail(e.target.value);
+      console.log(isValid);
+      if (!isValid) {
+        setErrorMessage("Invalid email.");
+      } else {
+        if (!e.target.value.length) {
+          setErrorMessage(`${e.target.name} is required.`);
+        } else {
+          setErrorMessage("");
+        }
+      }
+    }
+    if (!errorMessage) {
+      setFormState({ ...formState, [e.target.name]: e.target.value });
+    }
+  }
 
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(formState);
+    
   }
   return (
     <>
@@ -27,6 +48,7 @@ function Contact() {
             type="text"
             defaultValue={name}
             name="name"
+            onBlur={handleChange}
             placeholder="Enter your name"
           />
         </Form.Group>
@@ -37,6 +59,7 @@ function Contact() {
             type="email"
             defaultValue={email}
             name="email"
+            onBlur={handleChange}
             placeholder="Enter email address"
           />
           <Form.Text className="text-muted">
@@ -50,8 +73,14 @@ function Contact() {
             as="textarea"
             rows={5}
             name="message"
+            onBlur={handleChange}
             defaultValue={message}
           />
+          {errorMessage && (
+            <div>
+              <p className="error-text">{errorMessage}</p>
+            </div>
+          )}
         </Form.Group>
 
         <Button variant="primary" type="submit">
@@ -59,64 +88,8 @@ function Contact() {
         </Button>
       </Form>
 
-      <section id="my-contact" class="contact">
-        <div class="contact-info">
-          <h3>Contact Information</h3>
-          <p>Have any questions? Contact me.</p>
-          <br />
-          Phone: <a href="tel:432-557-2582">432-557-2582</a> <br />
-          Email:
-          <a href="mailto:michvalenz27@gmail.com" target="blank">
-            michvalenz27@gmail.com
-          </a>
-          <br />
-          Social Media:
-          <a
-            href="https://www.linkedin.com/in/michelle-valenzuela-4aa119190/"
-            target="blank"
-          >
-            Linkedin
-          </a>
-          <a href="https://github.com/MichValenz" target="blank">
-            Git Hub
-          </a>
-        </div>
-      </section>
+
     </>
-    // <section>
-    //   <h1>Contact Me</h1>
-    //   <form id="contact-form" onSubmit={handleSubmit}>
-    //     <div>
-    //       <label htmlFor="name">Name:</label>
-    //       <input
-    //         type="text"
-    //         defaultValue={name}
-
-    //         name="name"
-    //       />
-    //     </div>
-    //     <div>
-    //       <label htmlFor="email">Email address:</label>
-    //       <input
-    //         type="email"
-    //         defaultValue={email}
-    //         name="email"
-
-    //       />
-    //     </div>
-    //     <div>
-    //       <label htmlFor="message">Message:</label>
-    //       <textarea
-    //         name="message"
-    //         defaultValue={message}
-
-    //         rows="5"
-    //       />
-
-    //       <button type="submit">Submit</button>
-    //     </div>
-    //   </form>
-    // </section>
   );
 }
 
