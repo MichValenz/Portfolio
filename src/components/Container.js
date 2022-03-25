@@ -35,7 +35,10 @@ function Container() {
         <div class="hero">
           <div class="hero-section"></div>
         </div>
+        <div className="box">
         {render()}
+
+        </div>
       </div>
 
       <section id="my-contact" class="contact">
@@ -49,16 +52,18 @@ function Container() {
             michvalenz27@gmail.com
           </a>
           <br />
-          Social Media:
+          Social Media: 
           <a
             href="https://www.linkedin.com/in/michelle-valenzuela-4aa119190/"
             target="blank"
           >
-            Linkedin
-          </a>
+            Linkedin 
+          </a>{" "}
+        
           <a href="https://github.com/MichValenz" target="blank">
-            Git Hub
-          </a>
+            GitHub
+          </a>{" "}
+          <br />
         </div>
       </section>
       <footer>Website created by: Michelle Valenzuela</footer>

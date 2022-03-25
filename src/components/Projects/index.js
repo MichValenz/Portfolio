@@ -6,6 +6,7 @@ import CardGroup from "react-bootstrap/CardGroup";
 
 
 
+
 function Projects() {
 const projectList = [
   {
@@ -52,28 +53,33 @@ const projectList = [
 ];
 
  const render = (proj) => { 
+
+  
   return (
-   
     <Row className="row">
-      <Col >
+      <Col>
         <Card className="project" style={{ width: "20rem", height: "28rem" }}>
           <Card.Img className="work-1" variant="top" src={proj.image} />
           <Card.Body>
             <Card.Title>{proj.name}</Card.Title>
             <Card.Text>{proj.description}</Card.Text>
-            <Button variant="primary" href={proj.link}>
-              Go to Website
-            </Button>
+            <Button href={proj.link}>Go to Website</Button>
           </Card.Body>
         </Card>
       </Col>
-   </Row>
+    </Row>
   );}
 
   return (
-    <CardGroup className="justify-content-center projContainer">
-      {projectList.map(render)}
-    </CardGroup>
+    <>
+      <Card.Header >
+        {" "}
+        <h1>Projects</h1>
+      </Card.Header>
+      <CardGroup className="justify-content-center projContainer">
+        {projectList.map(render)}
+      </CardGroup>
+    </>
   );
 }
 

@@ -10,7 +10,6 @@ function Navigation({currentOption, navOptionChange}) {
       <header>
         <h2>
           <a
-            
             href="/"
             onClick={() => navOptionChange("/")}
             className={currentOption === "/" ? "currentOption" : ""}
@@ -20,11 +19,14 @@ function Navigation({currentOption, navOptionChange}) {
         </h2>
         <Nav variant="pills" defaultActiveKey="/">
           <Nav.Item>
-            <Nav.Link
+            <Nav.Link 
               eventKey="link-1"
               href="/#About Me"
               onClick={() => navOptionChange("About Me")}
-              className={currentOption === "About Me" ? "currentOption" : ""}
+              className={
+                currentOption === "About Me" ? "currentOption" : "navActive"
+              }
+             
             >
               About Me
             </Nav.Link>
@@ -40,12 +42,13 @@ function Navigation({currentOption, navOptionChange}) {
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link 
-            eventKey="link-3" 
-            href="/#Projects"
-            onClick={() => navOptionChange("Projects")}
-            className={currentOption === "Projects" ? "currentOption" : ""}
-              >Projects
+            <Nav.Link
+              eventKey="link-3"
+              href="/#Projects"
+              onClick={() => navOptionChange("Projects")}
+              className={currentOption === "Projects" ? "currentOption" : ""}
+            >
+              Projects
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>

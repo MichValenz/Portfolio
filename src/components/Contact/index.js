@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { validateEmail } from "../../utils/helpers"
+import Card from "react-bootstrap/Card";
 
 
 function Contact() {
@@ -40,8 +41,11 @@ function Contact() {
   }
   return (
     <>
-      <Form className="contactForm" onSubmit={handleSubmit}>
+      <Card.Header>
+        {" "}
         <h1>Contact Me</h1>
+      </Card.Header>
+      <Form className="contactForm" onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Name</Form.Label>
           <Form.Control
@@ -87,8 +91,6 @@ function Contact() {
           Submit
         </Button>
       </Form>
-
-
     </>
   );
 }
