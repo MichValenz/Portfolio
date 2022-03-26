@@ -22,7 +22,6 @@ header {
 
 }
 
-
 h1 {
   color: #2e374d
 }
@@ -135,6 +134,8 @@ padding: 15px;
   color: #2e374d;
   font-size: 25px;
 }
+
+
 
 .flex-row {
   display: flex;

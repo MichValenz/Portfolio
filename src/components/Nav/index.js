@@ -19,14 +19,11 @@ function Navigation({currentOption, navOptionChange}) {
         </h2>
         <Nav variant="pills" defaultActiveKey="/">
           <Nav.Item>
-            <Nav.Link 
+            <Nav.Link
               eventKey="link-1"
               href="/#About Me"
               onClick={() => navOptionChange("About Me")}
-              className={
-                currentOption === "About Me" ? "currentOption" : ""
-              }
-             
+              className={currentOption === "About Me" ? "currentOption" : ""}
             >
               About Me
             </Nav.Link>
@@ -64,7 +61,6 @@ function Navigation({currentOption, navOptionChange}) {
         </Nav>
       </header>
     </>
-    
   );
   
 }

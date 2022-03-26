@@ -4,11 +4,16 @@ import Projects from "./Projects";
 import About from "./About";
 import Resume from "./Resume/";
 import Contact from "./Contact";
+import { GoMarkGithub } from "react-icons/go";
+import { AiFillLinkedin, AiFillMail, AiFillPhone } from "react-icons/ai";
+import { IconContext } from "react-icons";
 
 
 function Container() {
-  const [currentOption, setOption] = useState("About Me");
+  
 
+
+  const [currentOption, setOption] = useState("About Me");
   const render = () => {
     if (currentOption === "About Me") {
       return <About />;
@@ -35,37 +40,35 @@ function Container() {
         <div class="hero">
           <div class="hero-section"></div>
         </div>
-        <div className="box">
-        {render()}
-
-        </div>
+        <div className="box">{render()}</div>
       </div>
 
       <section id="my-contact" class="contact">
         <div class="contact-info">
+          <IconContext.Provider value={{size: "3em", color: "#2e374d"}}>
           <h3>Contact Information</h3>
           <p>Have any questions? Contact me.</p>
-          <br />
-          Phone: <a href="tel:432-557-2582">432-557-2582</a> <br />
-          Email:
-          <a href="mailto:michvalenz27@gmail.com" target="blank">
-            michvalenz27@gmail.com
-          </a>
-          <br />
-          Social Media: 
-          <a
-            href="https://www.linkedin.com/in/michelle-valenzuela-4aa119190/"
-            target="blank"
-          >
-            Linkedin 
-          </a>{" "}
-        
-          <a href="https://github.com/MichValenz" target="blank">
-            GitHub
-          </a>{" "}
-          <br />
+          
+            <a href="tel:432-557-2582">
+              <AiFillPhone />
+            </a>
+            <a href="mailto:michvalenz27@gmail.com" alt="email" target="blank">
+              <AiFillMail />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/michelle-valenzuela-4aa119190/"
+              alt="linkedin"
+              target="blank"
+            >
+              <AiFillLinkedin />
+            </a>{" "}
+            <a href="https://github.com/MichValenz" alt="github" target="blank">
+              <GoMarkGithub />
+            </a>{" "}
+        </IconContext.Provider>
         </div>
       </section>
+
       <footer>Website created by: Michelle Valenzuela</footer>
     </>
   );
