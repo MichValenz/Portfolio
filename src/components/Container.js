@@ -13,11 +13,14 @@ function Container() {
   
 
 
-  const [currentOption, setOption] = useState("About Me");
+  const [currentOption, setOption] = useState("/");
   const render = () => {
     if (currentOption === "About Me") {
       return <About />;
     }
+      if (currentOption === "/") {
+        return <About />;
+      }
     if (currentOption === "Resume") {
       return <Resume />;
     }
@@ -42,6 +45,8 @@ function Container() {
         </div>
         <div className="box">{render()}</div>
       </div>
+
+      
 
       <section id="my-contact" class="contact">
         <div class="contact-info">

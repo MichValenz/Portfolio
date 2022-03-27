@@ -119,7 +119,7 @@ padding: 15px;
 
 .contact {
   background-image: url("./images/pexels-katie-goertzen-4491648.jpg");
-  height: 300px;
+  height: cover;
   background-size: cover;
   background-position: 80%;
   background-attachment: fixed;

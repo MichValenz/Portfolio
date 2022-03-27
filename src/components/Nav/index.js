@@ -21,7 +21,7 @@ function Navigation({currentOption, navOptionChange}) {
           <Nav.Item>
             <Nav.Link
               eventKey="link-1"
-              href="/#About Me"
+              href="/"
               onClick={() => navOptionChange("About Me")}
               className={currentOption === "About Me" ? "currentOption" : ""}
             >
