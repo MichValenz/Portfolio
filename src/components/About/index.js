@@ -7,7 +7,7 @@ import headshot from "../../images/headshot.png"
 function About() {
   return (
     <>
-      <Container fluid bg-light>
+      <Container >
         <Row id="aboutMe">
           <Col>
             <h1 id="about">About Me</h1>
