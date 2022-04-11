@@ -2,51 +2,47 @@
 
 import "bootstrap/dist/css/bootstrap.min.css"
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navigation from "./components/Nav";
-import Projects from "./components/Projects";
-import About from "./components/About";
-import Resume from "./components/Resume/";
-import Contact from "./components/Contact";
+import Page from "./components/Page";
 import { GoMarkGithub } from "react-icons/go";
 import { AiFillLinkedin, AiFillMail, AiFillPhone } from "react-icons/ai";
 import { IconContext } from "react-icons";
 
 function App() {
-  const [currentOption, setOption] = useState("/");
-  const render = () => {
-    if (currentOption === "About Me") {
-      return <About />;
-    }
-    if (currentOption === "/") {
-      return <About />;
-    }
-    if (currentOption === "Resume") {
-      return <Resume />;
-    }
-    if (currentOption === "Projects") {
-      return <Projects />;
-    }
-    if (currentOption === "Contact") {
-      return <Contact />;
-    }
-  };
 
-  const navOptionChange = (option) => setOption(option);
 
+    const [pages] = useState([
+      {
+        name: "About Me",
+      },
+      { name: "Resume" },
+      { name: "Projects" },
+      {
+        name: "Contact",
+      },
+    ]);
+  
+
+   const [currentPage, setCurrentPage] = useState(pages[0]);
   return (
     <>
-      <div>
+    
+      <div className="App">
         <Navigation
-          currentOption={currentOption}
-          navOptionChange={navOptionChange}
+          pages={pages}
+          setCurrentPage={setCurrentPage}
+          currentPage={currentPage}
         />
 
         <div className="hero">
           <div className="hero-section"></div>
         </div>
-        <div className="box">{render()}</div>
+       
       </div>
+      <main>
+        <Page currentPage={currentPage}></Page>
+      </main>
 
       <section id="my-contact" className="contact">
         <div className="contact-info">

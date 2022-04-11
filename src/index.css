@@ -19,6 +19,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 9999;
+  cursor: pointer;
 
 }
 
@@ -49,19 +50,12 @@ header nav ul {
   list-style: none;
 }
 
-header nav ul li a {
+.navLinks{
   padding: 10px 15px;
-  font-weight: lighter;
+  font-weight: bold;
   font-size: 1.75vw;
-  color: #000000;
+  color: #2e374d;
   
-}
-
-header nav ul li a:hover {
-  background: #e4e9fb;
-  color: #0b0f1a;
-  border-radius: 15px;
-  text-shadow: none;
 }
 
 .hero {
@@ -82,18 +76,17 @@ header nav ul li a:hover {
 
 }
 
+
 .navActive {
-  background-color: aqua;
+  background-color: #2e374d;
+  color: #F9F9F9;
+  
 }
-nav a:hover {
-  text-decoration:rgb(6, 46, 6)
-}
+
 .box {
   background-color: #F9F9F9;
 }
-.btn {
-  background-color: darkolivegreen;
-}
+
 .container {
 
   width: 100%;

@@ -1,68 +1,54 @@
-
-import React from "react";
-import Nav from 'react-bootstrap/Nav'
-
-function Navigation({currentOption, navOptionChange}) {
+import React, { useEffect } from 'react';
 
 
-  return (
-    <>
+function Navigation(props) {
+  const {
+    pages = [],
+    setCurrentPage,
+    currentPage,
+  } = props;
+
+  useEffect(() => {
+    document.title = (currentPage.name);
+  }, [currentPage]);
+
+  return (    
+      
+      <>
       <header>
         <h2>
           <a
             href="/"
-            onClick={() => navOptionChange("/")}
-            className={currentOption === "/" ? "currentOption" : ""}
+            onClick={() => setCurrentPage("/")}
+            className={currentPage === "/" ? "currentPage" : ""}
           >
             Michelle Valenzuela
           </a>
         </h2>
-        <Nav variant="pills" defaultActiveKey="/">
-          <Nav.Item>
-            <Nav.Link
-              eventKey="link-1"
-              href="/#About Me"
-              onClick={() => navOptionChange("About Me")}
-              className={currentOption === "About Me" ? "currentOption" : ""}
+      
+      <nav>
+        <ul  className="flex-row">
+          {pages.map((Page) => (
+            <li
+              className={`navLinks ${
+                currentPage.name === Page.name && 'navActive'
+                }`}
+              key={Page.name}
             >
-              About Me
-            </Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link
-              eventKey="link-2"
-              href="/#Resume"
-              onClick={() => navOptionChange("Resume")}
-              className={currentOption === "Resume" ? "currentOption" : ""}
-            >
-              Resume
-            </Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link
-              eventKey="link-3"
-              href="/#Projects"
-              onClick={() => navOptionChange("Projects")}
-              className={currentOption === "Projects" ? "currentOption" : ""}
-            >
-              Projects
-            </Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link
-              eventKey="link-4"
-              href="/#Contact"
-              onClick={() => navOptionChange("Contact")}
-              className={currentOption === "Contact" ? "currentOption" : ""}
-            >
-              Contact
-            </Nav.Link>
-          </Nav.Item>
-        </Nav>
-      </header>
-    </>
+              <span
+                onClick={() => setCurrentPage(Page)}
+              >
+                {Page.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </nav>
+        </header>
+      </>
   );
-  
 }
+
+
 
 export default Navigation;
