@@ -17,13 +17,9 @@ function Navigation(props) {
       <>
       <header>
         <h2>
-          <a
-            href="/"
-            onClick={() => setCurrentPage("/")}
-            className={currentPage === "/" ? "currentPage" : ""}
-          >
+         
             Michelle Valenzuela
-          </a>
+         
         </h2>
       
       <nav>
