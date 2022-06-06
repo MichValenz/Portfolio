@@ -15,6 +15,7 @@ const projectList = [
     description:
       "An employee tracking application designed specifically for quality assurance departments.",
     link: "https://mighty-reef-11767.herokuapp.com/",
+    github: "https://github.com/Jiryeah/FiMi-QA_Application",
   },
   {
     name: "Tech Cat",
@@ -22,20 +23,14 @@ const projectList = [
     description:
       "This application allows users to post and track tech related blogs.",
     link: "https://dry-retreat-70520.herokuapp.com/",
-  },
-  {
-    name: "m5",
-    image: require("../../images/m5.jpg"),
-    description:
-      "This application allows users to quickly find videos of searched actors.",
-    link: "https://michvalenz.github.io/m5/",
+    github: "https://github.com/MichValenz/Tech-Blog",
   },
   {
     name: "README Generator",
     image: require("../../images/readme.jpg"),
     description:
       "This backend only application creates README files for users with user input.",
-    link: "https://github.com/MichValenz/README-generator",
+    github: "https://github.com/MichValenz/README-generator",
   },
   {
     name: "note-taker",
@@ -43,12 +38,7 @@ const projectList = [
     description:
       "From to-do lists to big ideas, Note Taker is an easy way to document and track your notes.",
     link: "https://secret-hamlet-22284.herokuapp.com/",
-  },
-  {
-    name: "run-buddy",
-    image: require("../../images/runbuddy.jpg"),
-    description: "A website that offers fitness training services.",
-    link: "https://michvalenz.github.io/run-buddy2/",
+    github: "https://github.com/MichValenz/note-taker",
   },
 ];
 
@@ -58,12 +48,24 @@ const projectList = [
   return (
     <Row className="row">
       <Col>
-        <Card className="project" style={{ width: "20rem", height: "28rem" }}>
+        <Card className="project" style={{ width: "20rem", height: "32rem" }}>
           <Card.Img className="work-1" variant="top" src={proj.image} />
           <Card.Body>
             <Card.Title>{proj.name}</Card.Title>
             <Card.Text>{proj.description}</Card.Text>
-            <Button href={proj.link}>Go to Website</Button>
+            <Button
+              style={{ margin: "5px" }}
+              href={proj.link}
+            >
+              Go to Website
+            </Button>{" "}
+            
+            <Button
+              style={{ margin: "5px" }}
+              href={proj.github}
+            >
+              GitHub Repo
+            </Button>
           </Card.Body>
         </Card>
       </Col>
