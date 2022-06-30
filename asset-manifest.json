@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.28e023bf.css",
-    "main.js": "/portfolio/static/js/main.7485d42b.js",
+    "main.js": "/portfolio/static/js/main.24226969.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/pexels-katie-goertzen-4491648.jpg": "/portfolio/static/media/pexels-katie-goertzen-4491648.90be78806ca8e4fba191.jpg",
     "static/media/headshot.png": "/portfolio/static/media/headshot.00354126d862adbdc64f.png",
@@ -12,11 +12,11 @@
     "static/media/notetaker.jpg": "/portfolio/static/media/notetaker.ca2e31ad9659c6590f83.jpg",
     "index.html": "/portfolio/index.html",
     "main.28e023bf.css.map": "/portfolio/static/css/main.28e023bf.css.map",
-    "main.7485d42b.js.map": "/portfolio/static/js/main.7485d42b.js.map",
+    "main.24226969.js.map": "/portfolio/static/js/main.24226969.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.28e023bf.css",
-    "static/js/main.7485d42b.js"
+    "static/js/main.24226969.js"
   ]
 }
